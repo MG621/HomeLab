@@ -20,6 +20,10 @@ A production-style, containerized Linux home server environment architected for 
 ### 2. Network-Wide Privacy & Services
 * **Pi-hole:** Network-wide DNS sinkhole acting as the primary local DNS server to block ads, telemetry, and tracking at the network layer.
 * **Minecraft Server:** Dedicated multiplayer server containerized with persistent volume storage for automated backups.
+### Tailscale VPN & Secure Remote Access
+* **Zero-Trust Mesh Network:** Integrated with **Tailscale** (built on WireGuard) to establish a secure, encrypted virtual private network across all remote devices without exposing raw ports to the public internet.
+* **Remote Connectivity:** Enables seamless, passwordless remote access to the Ubuntu server, Docker management tools, and media shares from anywhere in the world.
+* **Controlled Access:** Utilized for secure peer-to-peer connectivity, allowing trusted external users (such as friends joining the Minecraft server) to connect to internal local services safely and privately.
 
 ### 3. Monitoring & Reliability
 * **Glances:** Real-time, cross-platform system performance monitoring (CPU, RAM, disk I/O, and network bandwidth utilization).
