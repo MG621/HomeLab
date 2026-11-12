@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  plex:
+    image: linuxserver/plex
+    container_name: plex
+    network_mode: host
+    environment: 
+      PUID: 1000
+      PGID: 1000
+      VERSION: latest
+    volumes:
+      - /mnt/media/movies:/media/movies
+      - /mnt/media/tv_shows:/media/tv_shows
+      - ~/docker/plex/config:/config
+    restart: unless-stopped

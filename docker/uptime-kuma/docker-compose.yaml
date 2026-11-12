@@ -1,0 +1,11 @@
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:latest
+    container_name: uptime-kuma
+    network_mode: host
+    user: root
+    volumes:
+      - ~/docker/uptime-kuma:/app/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+
