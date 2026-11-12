@@ -1,0 +1,55 @@
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), deny (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+53                         ALLOW IN    Anywhere
+53/tcp                     ALLOW IN    Anywhere
+53/udp                     ALLOW IN    Anywhere
+8096                       ALLOW IN    100.0.0.0/8
+8080                       DENY IN     Anywhere
+8080                       ALLOW IN    192.168.1.0/24
+8080                       ALLOW IN    100.64.0.0/10
+Anywhere on tailscale0     ALLOW IN    Anywhere
+22 on tailscale0           ALLOW IN    Anywhere
+Anywhere                   ALLOW IN    192.168.1.0/24
+32400 on tailscale0        ALLOW IN    Anywhere
+8096 on tailscale0         ALLOW IN    Anywhere
+25565 on tailscale0        ALLOW IN    Anywhere
+61208                      ALLOW IN    100.64.0.0/10
+137,138/udp (Samba)        ALLOW IN    Anywhere
+139,445/tcp (Samba)        ALLOW IN    Anywhere
+67/udp                     ALLOW IN    Anywhere
+68/udp                     ALLOW IN    Anywhere
+69/udp                     ALLOW IN    Anywhere
+111/udp                    ALLOW IN    Anywhere
+111/tcp                    ALLOW IN    Anywhere
+892/udp                    ALLOW IN    Anywhere
+892/tcp                    ALLOW IN    Anywhere
+9999                       ALLOW IN    192.168.1.0/24
+64702/udp                  ALLOW IN    Anywhere
+25566 on tailscale0        ALLOW IN    Anywhere
+445                        ALLOW IN    Anywhere
+53 (v6)                    ALLOW IN    Anywhere (v6)
+53/tcp (v6)                ALLOW IN    Anywhere (v6)
+53/udp (v6)                ALLOW IN    Anywhere (v6)
+8080 (v6)                  DENY IN     Anywhere (v6)
+Anywhere (v6) on tailscale0 ALLOW IN    Anywhere (v6)
+22 (v6) on tailscale0      ALLOW IN    Anywhere (v6)
+32400 (v6) on tailscale0   ALLOW IN    Anywhere (v6)
+8096 (v6) on tailscale0    ALLOW IN    Anywhere (v6)
+25565 (v6) on tailscale0   ALLOW IN    Anywhere (v6)
+137,138/udp (Samba (v6))   ALLOW IN    Anywhere (v6)
+139,445/tcp (Samba (v6))   ALLOW IN    Anywhere (v6)
+67/udp (v6)                ALLOW IN    Anywhere (v6)
+68/udp (v6)                ALLOW IN    Anywhere (v6)
+69/udp (v6)                ALLOW IN    Anywhere (v6)
+111/udp (v6)               ALLOW IN    Anywhere (v6)
+111/tcp (v6)               ALLOW IN    Anywhere (v6)
+892/udp (v6)               ALLOW IN    Anywhere (v6)
+892/tcp (v6)               ALLOW IN    Anywhere (v6)
+64702/udp (v6)             ALLOW IN    Anywhere (v6)
+25566 (v6) on tailscale0   ALLOW IN    Anywhere (v6)
+445 (v6)                   ALLOW IN    Anywhere (v6)
