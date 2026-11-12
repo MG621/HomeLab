@@ -38,7 +38,6 @@ A production-style, containerized Linux home server environment architected for 
 
 ## Repository Structure
 ```text
-├── docker-compose.yml       # Centralized container stack definitions
-├── scripts/                 # Automated backup and maintenance utilities
-├── ufw/                     # Firewall rule templates and hardening notes
+├── docker/                  # Centralized container stack definitions
+├── ufw.txt                  # Firewall rule templates and hardening notes
 └── README.md                # Infrastructure documentation
